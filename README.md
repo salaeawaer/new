@@ -1,0 +1,2 @@
+# new
+New:  Func _GDIPlus_GraphicsSetInterpolationMode($hGraphics, $iInterpolationMode)     Local $aCall = DllCall($__g_hGDIPDll, "int", "GdipSetInterpolationMode", "handle", $hGraphics, "int", $iInterpolationMode + 1)     If @error Then Return SetError(@error, @extended, False)     If $aCall[0] Then Return SetError(10, $aCall[0], False)      Return True EndFunc   ;==>_GDIPlus_GraphicsSetInterpolationMode
